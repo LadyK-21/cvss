@@ -1,20 +1,19 @@
-name: Semantic release
+name: Release Semantic release
 
 on:
   push:
-    branches:
-      - master
+    branches: [ main]
 
-jobs:
+jobs: 
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GPR_TOKEN }}
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 14.x
 
       - name: Semantic release
         run: npx semantic-release
