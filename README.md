@@ -15,7 +15,7 @@ Each metric consists of name and value (both abbreviated) separated with ':'.
 
 Sample CVSS v3.1 vector string: `CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N`
 
-Score is: [3.8](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N), severity: [Low](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N)
+Score is: [3.1(https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N), severity: [Low](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N)
 
 ### Current library limitations 🚧
 
@@ -90,7 +90,7 @@ Return un-abbreviated metric value: e.g. 'Network' for input ('AV', 'N')
 ```
 import { calculateBaseScore } from '@neuralegion/cvss';
 
-console.log('score: ', calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
+console.log('score: ', calculateBaseScore('CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
 ```
 
 </details>
@@ -101,7 +101,7 @@ console.log('score: ', calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/
 ```
 const cvss = require('@neuralegion/cvss');
 
-console.log(cvss.calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
+console.log(cvss.calculateBaseScore('CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
 ```
 
 </details>
@@ -115,7 +115,7 @@ console.log(cvss.calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:
 ```
 import cvss from '@neuralegion/cvss';
 
-console.log(cvss.calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
+console.log(cvss.calculateBaseScore('CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N'));
 ```
 
 Running: `node --experimental-modules ./usage.mjs`
@@ -128,7 +128,7 @@ Running: `node --experimental-modules ./usage.mjs`
 ```
 <script src="./node_modules/@neuralegion/cvss/dist/bundle.umd.js"></script>
 <script>
-  alert(`Score: ${cvss.calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N')}`);
+  alert(`Score: ${cvss.calculateBaseScore('CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N')}`);
 </script>
 ```
 
@@ -140,7 +140,7 @@ Running: `node --experimental-modules ./usage.mjs`
 ```
 <script type="module">
   import { calculateBaseScore } from './node_modules/@neuralegion/cvss/dist/bundle.es.js';
-  alert(`Score: ${calculateBaseScore('CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N')}`);
+  alert(`Score: ${calculateBaseScore('CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N')}`);
 </script>
 ```
 
